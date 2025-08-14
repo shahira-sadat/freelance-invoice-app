@@ -3,25 +3,7 @@ A web application for managing clients and tracking invoices.
 Built with HTML, CSS, and JavaScript.
 
 ## 🌐 Live Demo
-[]()
-
-## 📂 Project Structure
-
-freelance-invoice-app/
-├── index.html         → Dashboard (summary of clients + invoices)
-├── clients.html       → Add/view/edit/delete clients
-├── invoices.html      → Create and view invoices
-├── css/
-│   └── style.css
-├── js/
-│   ├── main.js        → Shared UI functions or navigation
-│   ├── clients.js     → Logic for handling clients
-│   ├── invoices.js    → Logic for handling invoices
-│   ├── data.js        → Store data arrays
-│   └── utils.js       → Reusable utility functions
-└── data/
-    └── quotes.json    → Motivational quotes
-
+[freelance Invoice App](https://chic-crumble-7cf16c.netlify.app/)
 
 ## 🔧 Features
 
