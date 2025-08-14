@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Manager — Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">💼 Freelance<span>Pro</span></div>
+      <nav>
+        <a class="nav-link active" href="index.html">Dashboard</a>
+        <a class="nav-link" href="clients.html">Clients</a>
+        <a class="nav-link" href="invoices.html">Invoices</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="page-header">
+        <h1>Dashboard</h1>
+        <div class="header-actions">
+          <span id="today"></span>
+        </div>
+      </header>
+
+      <section class="cards">
+        <div class="card metric">
+          <div class="metric-top">
+            <p>Total Clients</p>
+            <span class="badge">All</span>
+          </div>
+          <h2 id="totalClients">0</h2>
+        </div>
+
+        <div class="card metric">
+          <div class="metric-top">
+            <p>Total Invoices</p>
+            <span class="badge">All</span>
+          </div>
+          <h2 id="totalInvoices">0</h2>
+        </div>
+
+        <div class="card metric">
+          <div class="metric-top">
+            <p>Total Value</p>
+            <span class="badge">USD</span>
+          </div>
+          <h2 id="totalValue">$0.00</h2>
+        </div>
+
+        <div class="card metric">
+          <div class="metric-top">
+            <p>Paid / Unpaid</p>
+            <span class="badge">Status</span>
+          </div>
+          <h2>
+            <span id="paidCount">0</span> / <span id="unpaidCount">0</span>
+          </h2>
+        </div>
+      </section>
+
+      <section class="grid two">
+        <article class="card">
+          <h3>Recent Invoices</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Client</th>
+                  <th>Title</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="recentInvoices"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="card quote">
+          <h3>Motivational Quote</h3>
+          <blockquote id="quoteText">Loading quote…</blockquote>
+          <cite id="quoteAuthor"></cite>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

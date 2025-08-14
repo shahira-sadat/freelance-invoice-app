@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Manager — Invoices</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/invoices.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">💼 Freelance<span>Pro</span></div>
+      <nav>
+        <a class="nav-link" href="index.html">Dashboard</a>
+        <a class="nav-link" href="clients.html">Clients</a>
+        <a class="nav-link active" href="invoices.html">Invoices</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="page-header">
+        <h1>Invoices</h1>
+        <div class="header-actions">
+          <select id="statusFilter" class="input">
+            <option value="all">All</option>
+            <option value="paid">Paid</option>
+            <option value="unpaid">Unpaid</option>
+          </select>
+        </div>
+      </header>
+
+      <section class="grid two">
+        <form id="invoiceForm" class="card form">
+          <h3>Create Invoice</h3>
+          <label>
+            <span>Client *</span>
+            <select id="invoiceClient" class="input" required></select>
+          </label>
+          <label>
+            <span>Service Title *</span>
+            <input id="invoiceTitle" class="input" type="text" required />
+          </label>
+          <label>
+            <span>Description</span>
+            <textarea id="invoiceDesc" class="textarea" rows="3"></textarea>
+          </label>
+          <label>
+            <span>Amount (USD) *</span>
+            <input
+              id="invoiceAmount"
+              class="input"
+              type="number"
+              step="0.01"
+              min="0"
+              required
+            />
+          </label>
+          <label>
+            <span>Date *</span>
+            <input id="invoiceDate" class="input" type="date" required />
+          </label>
+          <div class="actions">
+            <button type="submit" class="btn">Add Invoice</button>
+            <button type="reset" class="btn btn-ghost">Reset</button>
+          </div>
+        </form>
+
+        <article class="card">
+          <h3>All Invoices</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Client</th>
+                  <th>Title</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="invoicesTableBody"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

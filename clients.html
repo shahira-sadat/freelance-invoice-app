@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Manager — Clients</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/clients.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">💼 Freelance<span>Pro</span></div>
+      <nav>
+        <a class="nav-link" href="index.html">Dashboard</a>
+        <a class="nav-link active" href="clients.html">Clients</a>
+        <a class="nav-link" href="invoices.html">Invoices</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="page-header">
+        <h1>Clients</h1>
+        <div class="header-actions">
+          <input
+            id="clientSearch"
+            class="input"
+            type="search"
+            placeholder="Search clients…"
+          />
+          <button id="clearSearch" class="btn btn-ghost">Clear</button>
+        </div>
+      </header>
+
+      <section class="grid two">
+        <form id="clientForm" class="card form">
+          <h3 id="formTitle">Add New Client</h3>
+          <input type="hidden" id="clientId" />
+          <label>
+            <span>Name *</span>
+            <input id="clientName" class="input" type="text" required />
+          </label>
+          <label>
+            <span>Email *</span>
+            <input id="clientEmail" class="input" type="email" required />
+          </label>
+          <label>
+            <span>Company</span>
+            <input id="clientCompany" class="input" type="text" />
+          </label>
+          <label>
+            <span>Notes</span>
+            <textarea id="clientNotes" class="textarea" rows="3"></textarea>
+          </label>
+          <div class="actions">
+            <button type="submit" class="btn">Save Client</button>
+            <button type="button" id="cancelEdit" class="btn btn-ghost">
+              Cancel
+            </button>
+          </div>
+          <p class="hint">Fields marked * are required.</p>
+        </form>
+
+        <article class="card">
+          <h3>All Clients</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Company</th>
+                  <th>Notes</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="clientsTableBody"></tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
